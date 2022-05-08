@@ -28,29 +28,29 @@ $invoiceConfigs = require_once '../configs/invoice.php';
     <br>
 
     <?php
-        $invoice = new Invoice($invoiceConfigs, new Wallet([
+        $wallet = new Wallet([
             'defaultWallet' => Rub::NAME,
             'wallets' => [
                 Rub::NAME => 1000,
                 Eur::NAME => 50,
                 Usd::NAME => 40
             ],
-        ]));
+        ]);
     ?>
 
-    <?php $balance = $invoice->wallet->get(Rub::NAME) ?>
+    <?php $balance = $wallet->get(Rub::NAME) ?>
     <h3>Пополнение рублевого баланса: </h3>
     <p> <b>Баланс до пополнения: </b> <?= $balance->get() ?> </p>
     <p> <b>Баланс после пополнения: </b> <?= $balance->credit(1000)->get() ?> </p>
     <br>
 
-    <?php $balance = $invoice->wallet->get(Eur::NAME) ?>
+    <?php $balance = $wallet->get(Eur::NAME) ?>
     <h3>Пополнение баланса в евро: </h3>
     <p> <b>Баланс до пополнения: </b> <?= $balance->get() ?> </p>
     <p> <b>Баланс после пополнения: </b> <?= $balance->credit(50)->get() ?>  </p>
     <br>
 
-    <?php $balance = $invoice->wallet->get(Usd::NAME) ?>
+    <?php $balance = $wallet->get(Usd::NAME) ?>
     <h3>Списание с долларового баланса: </h3>
     <p> <b>Баланс до пополнения: </b> <?= $balance->get() ?> </p>
     <p> <b>Баланс после пополнения: </b> <?= $balance->debit(10)->get() ?>  </p>

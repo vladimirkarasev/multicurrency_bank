@@ -27,23 +27,23 @@ $invoiceConfigs = require_once '../configs/invoice.php';
     <p>Клиент хочет увидеть суммарный баланс счета в основной валюте, либо в валюте на выбор.</p>
 
     <?php
-        $invoice = new Invoice($invoiceConfigs, new Wallet([
-            'defaultWallet' => Rub::NAME,
-            'wallets' => [
-                Rub::NAME => 1000,
-                Eur::NAME => 50,
-                Usd::NAME => 40
-            ],
-        ]));
+    $wallet = new Wallet([
+        'defaultWallet' => Rub::NAME,
+        'wallets' => [
+            Rub::NAME => 1000,
+            Eur::NAME => 50,
+            Usd::NAME => 40
+        ],
+    ]);
     ?>
 
-    <?php $balance = $invoice->wallet->get(Rub::NAME) ?>
+    <?php $balance = $wallet->get(Rub::NAME) ?>
     <p>Баланс рублевого кошелька: <b><?= $balance->get() ?></b></p>
 
-    <?php $balance = $invoice->wallet->get(Eur::NAME) ?>
+    <?php $balance = $wallet->get(Eur::NAME) ?>
     <p>Баланса в евро: <b><?= $balance->get() ?></b></p>
 
-    <?php $balance = $invoice->wallet->get(Usd::NAME) ?>
+    <?php $balance = $wallet->get(Usd::NAME) ?>
     <p>Баланс долларового кошелька: <b><?= $balance->get() ?></b></p>
 </body>
 </html>

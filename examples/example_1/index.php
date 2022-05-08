@@ -27,12 +27,10 @@ $invoiceConfigs = require_once '../configs/invoice.php';
     <p>Клиент открывает мультивалютный счет, включающий сбережения в 3-х валютах с основной валютой российский рубль, и пополняет его следующими суммами: 1000 RUB, 50 EUR, 40 USD</p>
 
     <?php
-        $invoice = new Invoice($invoiceConfigs, new Wallet([
+        $wallet = new Wallet([
             'defaultWallet' => Rub::NAME,
             'wallets' => [],
-        ]));
-
-        $wallet = $invoice->wallet;
+        ]);
 
         /** Добавлюем 3 новых кошелька с валютой */
         $wallet->add(Rub::NAME);
