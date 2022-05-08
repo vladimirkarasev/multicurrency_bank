@@ -1,6 +1,6 @@
 <?php
 
-namespace MultiCurrency\Bank\Currencies;
+namespace App\Currencies;
 
 interface CurrencyInterface
 {

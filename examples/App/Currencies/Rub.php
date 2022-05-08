@@ -1,11 +1,9 @@
 <?php
 declare(strict_types=1);
 
-namespace MultiCurrency\Bank\Currencies;
+namespace App\Currencies;
 
 class Rub implements CurrencyInterface
 {
-    const NAME = 'RUB';
-
-
+    const NAME = 'RUR';
 }
