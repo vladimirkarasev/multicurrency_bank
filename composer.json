@@ -1,0 +1,19 @@
+{
+  "name": "multicurrency/bank",
+  "type": "library",
+  "autoload": {
+    "psr-4": {
+      "MultiCurrency\\Bank\\": "src"
+    }
+  },
+  "require": {
+    "php": "^8.0",
+    "yiisoft/arrays": "^2.0",
+    "yiisoft/var-dumper": "^1.2"
+  },
+  "config": {
+    "platform": {
+      "php": "8.0"
+    }
+  }
+}
