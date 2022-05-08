@@ -7,8 +7,9 @@ use MultiCurrency\Bank\Currencies\Usd;
 use MultiCurrency\Bank\Invoice;
 use MultiCurrency\Bank\Wallet;
 
-require '../vendor/autoload.php';
-$invoiceConfigs = require_once 'configs/invoice.php';
+require '../../vendor/autoload.php';
+
+$invoiceConfigs = require_once '../configs/invoice.php';
 ?>
 
 <!doctype html>
