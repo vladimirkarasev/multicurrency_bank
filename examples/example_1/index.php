@@ -46,28 +46,31 @@ $invoiceConfigs = require_once '../configs/invoice.php';
         $supportCurrency = $wallet->getSupportCurrency();
     ?>
 
-    <p>Список поддержываемых валют</p>
+    <h3>Список поддержываемых валют</h3>
     <pre><?php var_dump($supportCurrency) ?></pre>
+    <br>
 
     <?php
     $balance = $wallet->get(Rub::NAME);
     ?>
-    <p>Пополнение рублевого баланса: </p>
+    <h3>Пополнение рублевого баланса: </h3>
     <p> <b>Баланс до пополнения: </b> <?= $balance->get() ?> </p>
-    <p> <b>Баланс после пополнения: </b> <?= $balance->add(1000)->get() ?>  </p>
+    <p> <b>Баланс после пополнения: </b> <?= $balance->credit(1000)->get() ?>  </p>
+    <br>
     <?php
     $balance = $wallet->get(Eur::NAME);
     ?>
-    <p>Пополнение баланса в евро: </p>
+    <h3>Пополнение баланса в евро: </h3>
     <p> <b>Баланс до пополнения: </b> <?= $balance->get() ?> </p>
-    <p> <b>Баланс после пополнения: </b> <?= $balance->add(50)->get() ?>  </p>
+    <p> <b>Баланс после пополнения: </b> <?= $balance->credit(50)->get() ?>  </p>
+    <br>
 
     <?php
     $balance = $wallet->get(Usd::NAME);
     ?>
-    <p>Пополнение долларового баланса: </p>
+    <h3>Пополнение долларового баланса: </h3>
     <p> <b>Баланс до пополнения: </b> <?= $balance->get() ?> </p>
-    <p> <b>Баланс после пополнения: </b> <?= $balance->add(50)->get() ?>  </p>
+    <p> <b>Баланс после пополнения: </b> <?= $balance->credit(50)->get() ?>  </p>
 </body>
 </html>
 

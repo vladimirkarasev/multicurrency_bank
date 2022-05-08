@@ -17,10 +17,26 @@ class Balance
      * @param float $amount
      * @return $this
      */
-    public function add(float $amount): self
+    public function credit(float $amount): self
     {
-        $this->amount = $amount;
-        return  $this;
+        $this->amount += $amount;
+        return $this;
+    }
+
+    /**
+     * Списать с баланса
+     * @param float $amount
+     * @return $this
+     * @throws \Exception
+     */
+    public function debit(float $amount): self
+    {
+        $currentAmount = $this->amount;
+
+        if ($amount > $currentAmount ) throw new \Exception('Невозможно списать средства, недостаточно средств');
+
+        $this->amount -= $amount;
+        return $this;
     }
 
     /**
