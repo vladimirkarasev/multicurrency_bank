@@ -3,17 +3,18 @@
   "type": "library",
   "autoload": {
     "psr-4": {
-      "MultiCurrency\\Bank\\": "src"
+      "MultiCurrency\\": "src"
     }
   },
   "require": {
-    "php": "^8.0",
-    "yiisoft/arrays": "^2.0",
-    "yiisoft/var-dumper": "^1.2"
+    "php": "^8.2"
   },
   "config": {
     "platform": {
-      "php": "8.0"
+      "php": "8.2"
     }
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "3.*"
   }
 }

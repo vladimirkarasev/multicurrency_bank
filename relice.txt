@@ -1,0 +1,11 @@
+1. Создать валюты USD RUB EUR
+2. Создать кошелек
+
+
+
+
+
+WalletCollection
+    - Wallet
+        - Balance
+            - Currency

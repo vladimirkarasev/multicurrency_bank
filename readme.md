@@ -1,5 +1,19 @@
 # Управление мультивалютными счетами
 
+### PSR check
+```shell
+./vendor/bin/phpcs ./src/Balance/AbstractBalance.php --standard=PSR12
+```
+### PSR fix
+```shell
+./vendor/bin/phpcbf ./src/Balance/AbstractBalance.php --standard=PSR12
+```
+
+# todo
+- [ ] Использовать для вызова Объектов DI
+- [ ] Добавить документацию 
+- [ ] Тестирования
+
 Пакет предназначет для работы с кошельками и валютами. 
 
 Баланс кошельков можно пополнять , списывать , задавать и получать текущий баланс.
