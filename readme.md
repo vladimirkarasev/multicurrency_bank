@@ -1,5 +1,5 @@
 # Управление мультивалютными счетами
-
+ 
 ### PSR check
 ```shell
 ./vendor/bin/phpcs ./src/Balance/AbstractBalance.php --standard=PSR12
