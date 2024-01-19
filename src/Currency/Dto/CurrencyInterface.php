@@ -1,9 +1,16 @@
 <?php
+declare(strict_types=1);
 
-namespace MultiCurrency\Currency;
+namespace VladimirKarasev\MultiCurrency\Currency\Dto;
 
 interface CurrencyInterface
 {
+    /**
+     * Get symbol currency
+     * @return string
+     */
+    public function getSymbol(): string;
+
     /**
      * Код валюты
      * @return mixed
@@ -12,7 +19,7 @@ interface CurrencyInterface
 
     /**
      * Номер валюты
-     * @return mixed
+     * @return int
      */
     public function getNum(): int;
 

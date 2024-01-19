@@ -1,10 +1,12 @@
 <?php
+declare(strict_types=1);
 
-namespace MultiCurrency\Currency\Support\Exceptions;
+namespace VladimirKarasev\MultiCurrency\Currency\Collection\Exceptions;
 
+use Exception;
 use Throwable;
 
-class CurrencyAlreadyException extends \Exception
+class CurrencyAlreadyException extends Exception
 {
     public function __construct(
         string     $message = "",

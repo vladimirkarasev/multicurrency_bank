@@ -1,6 +1,7 @@
 <?php
+declare(strict_types=1);
 
-namespace MultiCurrency\Currency\Convert;
+namespace VladimirKarasev\MultiCurrency\Currency\Convert;
 
 interface CurrencyConvertInterface
 {
