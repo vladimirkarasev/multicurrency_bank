@@ -1,8 +1,7 @@
 <?php
+declare(strict_types=1);
 
-namespace MultiCurrency\Balance;
-
-use MultiCurrency\Currency\CurrencyInterface;
+namespace VladimirKarasev\MultiCurrency\Balance;
 
 interface BalanceFormatInterface
 {
